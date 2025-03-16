@@ -1,0 +1,12 @@
+C:\Users\Home\source\repos\best_shop\best_shop\bin\Debug\best_shop.exe.config
+C:\Users\Home\source\repos\best_shop\best_shop\bin\Debug\best_shop.exe
+C:\Users\Home\source\repos\best_shop\best_shop\bin\Debug\best_shop.pdb
+C:\Users\Home\source\repos\best_shop\best_shop\obj\Debug\best_shop.csproj.AssemblyReference.cache
+C:\Users\Home\source\repos\best_shop\best_shop\obj\Debug\best_shop.Form1.resources
+C:\Users\Home\source\repos\best_shop\best_shop\obj\Debug\best_shop.Form2.resources
+C:\Users\Home\source\repos\best_shop\best_shop\obj\Debug\best_shop.Properties.Resources.resources
+C:\Users\Home\source\repos\best_shop\best_shop\obj\Debug\best_shop.csproj.GenerateResource.cache
+C:\Users\Home\source\repos\best_shop\best_shop\obj\Debug\best_shop.csproj.CoreCompileInputs.cache
+C:\Users\Home\source\repos\best_shop\best_shop\obj\Debug\best_shop.exe
+C:\Users\Home\source\repos\best_shop\best_shop\obj\Debug\best_shop.pdb
+C:\Users\Home\source\repos\best_shop\best_shop\obj\Debug\best_shop.Form3.resources
