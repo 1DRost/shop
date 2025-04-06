@@ -28,12 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.orderId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
+            this.mDKDataSet = new best_shop.MDKDataSet();
+            this.mDKDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.статусзаказаBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.статус_заказаTableAdapter = new best_shop.MDKDataSetTableAdapters.Статус_заказаTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mDKDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mDKDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.статусзаказаBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -49,29 +55,12 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.orderId,
-            this.status});
-            this.dataGridView1.Location = new System.Drawing.Point(60, 96);
+            this.dataGridView1.Location = new System.Drawing.Point(43, 91);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(303, 321);
+            this.dataGridView1.Size = new System.Drawing.Size(339, 321);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // orderId
-            // 
-            this.orderId.HeaderText = "orderId";
-            this.orderId.MinimumWidth = 6;
-            this.orderId.Name = "orderId";
-            this.orderId.Width = 125;
-            // 
-            // status
-            // 
-            this.status.HeaderText = "status";
-            this.status.MinimumWidth = 6;
-            this.status.Name = "status";
-            this.status.Width = 125;
             // 
             // button1
             // 
@@ -83,6 +72,25 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // mDKDataSet
+            // 
+            this.mDKDataSet.DataSetName = "MDKDataSet";
+            this.mDKDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mDKDataSetBindingSource
+            // 
+            this.mDKDataSetBindingSource.DataSource = this.mDKDataSet;
+            this.mDKDataSetBindingSource.Position = 0;
+            // 
+            // статусзаказаBindingSource
+            // 
+            this.статусзаказаBindingSource.DataMember = "Статус_заказа";
+            this.статусзаказаBindingSource.DataSource = this.mDKDataSetBindingSource;
+            // 
+            // статус_заказаTableAdapter
+            // 
+            this.статус_заказаTableAdapter.ClearBeforeFill = true;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -93,7 +101,11 @@
             this.Controls.Add(this.label1);
             this.Name = "Form3";
             this.Text = "Form3";
+            this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mDKDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mDKDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.статусзаказаBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,7 +116,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orderId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status;
+        private System.Windows.Forms.BindingSource mDKDataSetBindingSource;
+        private MDKDataSet mDKDataSet;
+        private System.Windows.Forms.BindingSource статусзаказаBindingSource;
+        private MDKDataSetTableAdapters.Статус_заказаTableAdapter статус_заказаTableAdapter;
     }
 }

@@ -10,3 +10,6 @@ C:\Users\Home\source\repos\best_shop\best_shop\obj\Debug\best_shop.csproj.CoreCo
 C:\Users\Home\source\repos\best_shop\best_shop\obj\Debug\best_shop.exe
 C:\Users\Home\source\repos\best_shop\best_shop\obj\Debug\best_shop.pdb
 C:\Users\Home\source\repos\best_shop\best_shop\obj\Debug\best_shop.Form3.resources
+C:\Users\Home\source\repos\best_shop\best_shop\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Home\source\repos\best_shop\best_shop\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Home\source\repos\best_shop\best_shop\obj\Debug\best_shop.csproj.Up2Date

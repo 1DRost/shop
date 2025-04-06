@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.accept = new System.Windows.Forms.Button();
             this.deliver = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.recipient = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deliveryDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mDKDataSet = new best_shop.MDKDataSet();
+            this.покупательBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.покупательTableAdapter = new best_shop.MDKDataSetTableAdapters.ПокупательTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mDKDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.покупательBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // accept
@@ -68,12 +70,7 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.recipient,
-            this.address,
-            this.deliveryDate});
-            this.dataGridView1.Location = new System.Drawing.Point(80, 34);
+            this.dataGridView1.Location = new System.Drawing.Point(81, 37);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -90,41 +87,19 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // id
+            // mDKDataSet
             // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.id.HeaderText = "Id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.id.Width = 40;
+            this.mDKDataSet.DataSetName = "MDKDataSet";
+            this.mDKDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // recipient
+            // покупательBindingSource
             // 
-            this.recipient.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.recipient.HeaderText = "Получатель";
-            this.recipient.MinimumWidth = 6;
-            this.recipient.Name = "recipient";
-            this.recipient.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.recipient.Width = 125;
+            this.покупательBindingSource.DataMember = "Покупатель";
+            this.покупательBindingSource.DataSource = this.mDKDataSet;
             // 
-            // address
+            // покупательTableAdapter
             // 
-            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.address.HeaderText = "Адрес";
-            this.address.MinimumWidth = 6;
-            this.address.Name = "address";
-            this.address.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.address.Width = 250;
-            // 
-            // deliveryDate
-            // 
-            this.deliveryDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.deliveryDate.HeaderText = "Дата доставки";
-            this.deliveryDate.MinimumWidth = 6;
-            this.deliveryDate.Name = "deliveryDate";
-            this.deliveryDate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.deliveryDate.Width = 130;
+            this.покупательTableAdapter.ClearBeforeFill = true;
             // 
             // Form1
             // 
@@ -138,7 +113,10 @@
             this.Controls.Add(this.accept);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mDKDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.покупательBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -149,10 +127,9 @@
         private System.Windows.Forms.Button deliver;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn recipient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deliveryDate;
+        private MDKDataSet mDKDataSet;
+        private System.Windows.Forms.BindingSource покупательBindingSource;
+        private MDKDataSetTableAdapters.ПокупательTableAdapter покупательTableAdapter;
     }
 }
 
